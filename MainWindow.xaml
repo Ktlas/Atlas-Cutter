@@ -1,0 +1,18 @@
+﻿<Window x:Class="AtlasCutter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AtlasCutter"
+        mc:Ignorable="d"
+        Title="Atlas Cutter" Height="450" Width="800">
+    <Grid>
+        <Button Content="Load Images" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10,10,662,0" Click="OnLoadImagesClicked"/>
+        <Button Content="Save Images" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="156,10,516,0" Click="OnSaveImagesClicked"/>
+
+        <Canvas Name="imageCanvas" Background="Transparent" Margin="10,50,10,10" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp">
+            <Image Name="imageDisplay" Stretch="Uniform" HorizontalAlignment="Stretch"/>
+            <Rectangle Name="selectionRectangle" Fill="Transparent" Stroke="Black" StrokeThickness="2" Visibility="Collapsed"/>
+        </Canvas>
+    </Grid>
+</Window>
